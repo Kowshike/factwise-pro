@@ -1,11 +1,9 @@
 import "./fact.css";
-import {
-  RiDeleteBinLine,
-  RiEdit2Line,
-  RiCloseCircleLine,
-} from "react-icons/ri";
+
 import { useEffect, useState } from "react";
-import { TiTick } from "react-icons/ti";
+import { RiDeleteBinLine, RiEdit2Line, RiCloseCircleLine } from 'react-icons/ri';
+import { TiTick } from 'react-icons/ti';
+
 
 let initialRender = 0;
 

@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
-import Accordion from "./Accordion";
+import Fact from "./fact"; // Import the Fact component
+
 import CelebritiesArray from "./celebrities.json";
 import { useState } from "react";
 
@@ -7,7 +8,7 @@ function App() {
   const [celebrities, setCelebrities] = useState(CelebritiesArray);
   const updateUser = (update, edit, setEdit) => {
     let userArray = celebrities;
-    let objIndex = celebrities.findIndex((obj) => obj.id == update.id);
+    let objIndex = celebrities.findIndex((obj) => obj.id === update.id);
     userArray[objIndex] = update;
     setCelebrities([...userArray]);
     setEdit(0);
@@ -32,6 +33,7 @@ function App() {
           </div>
         </div>
         <div className="Accordion" id="accordionExample">
+          {/* Render Accordion component */}
           {celebrities.map((celeb) => (
             <fact
               celeb={celeb}
